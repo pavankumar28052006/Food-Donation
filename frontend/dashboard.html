@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="report.html">Add Donation</a>
+    </nav>
+    <button id="logoutBtn" class="btn" style="position:absolute;top:24px;right:32px;">Logout</button>
+  </header>
+  <div class="container">
+    <h1>Food Donation Dashboard</h1>
+    <p class="subtitle">Share surplus food so it can reach people in need—anyone can donate <p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-bottom: 28px; gap: 12px;">
+      <h2>Available Food Donations</h2>
+      <a href="report.html" class="btn">+ Add Food Donation</a>
+    </div>
+    <div style="margin: 24px 0 0 0; text-align:center;">
+      <input type="text" id="searchInput" placeholder="Search by food type, location, or contact..." class="input" style="width: 380px; max-width: 98vw;" />
+    </div>
+    <div style="margin-top: 36px;">
+      <div id="lostItems" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;"></div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('logoutBtn').onclick = function() {
+      localStorage.removeItem('token');
+      localStorage.removeItem('isAuthenticated');
+      window.location.href = 'login.html';
+    };
+  </script>
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
