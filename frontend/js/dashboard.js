@@ -1,5 +1,5 @@
 // Set your Render backend URL here
-const API_BASE = window.API_BASE || 'https://food-donation-0k53.onrender.com/';
+const API_BASE = window.API_BASE || 'https://food-donation-0k53.onrender.com';
 
 // Check authentication
 function checkAuth() {
